@@ -1,11 +1,12 @@
-import classes from "./featured-posts.module.css";
+import classes from "./featured-post.module.css";
+import PostGrid from "../posts/posts-grid.jsx";
 
-const featuredpost = () => {
-    return (
-       <section className={classes.latest}>
-           <h2>Featured Posts</h2>
-       </section>
-    )
-}
+const featuredpost = ({ posts }) => {
+  return (
+    <section className={classes.latest}>
+      <PostGrid posts={posts}></PostGrid>
+    </section>
+  );
+};
 
-export default featuredpost
+export default featuredpost;
